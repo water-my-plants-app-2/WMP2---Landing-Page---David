@@ -1,0 +1,314 @@
+.centered-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Indie Flower', cursive;
+  color: #5E6164;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Indie Flower', cursive;
+  color: #448e88;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main-navigation {
+  background-color: #0c3d46;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.main-navigation .nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-navigation .nav-container .logo-heading {
+  margin: 1rem;
+}
+.main-navigation .nav-container .nav {
+  display: flex;
+}
+.main-navigation .nav-container .nav a {
+  text-decoration: none;
+  color: #e6f8d4;
+  font-size: 2rem;
+  margin: 1rem;
+}
+footer {
+  color: #e6f8d4;
+  background: #0c3d46;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home {
+  margin-top: 150px;
+}
+.home .intro {
+  margin-top: 0px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home .intro {
+    margin-top: 20px;
+    padding: 15px;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+}
+.home .intro .intro-text {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .home .intro .intro-text {
+    width: 100%;
+  }
+}
+.home .intro .intro-text h3 {
+  margin-bottom: 10px;
+}
+.home .intro .intro-text p {
+  margin-bottom: 26px;
+}
+.home .intro .intro-text .btn {
+  text-decoration: none;
+  width: 35%;
+  border-radius: 0.4rem;
+  color: #e6f8d4;
+  background-color: #0c3d46;
+  padding: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border: 1px solid #0c3d46;
+}
+.home .intro .intro-text .btn:hover {
+  color: #0c3d46;
+  background-color: #e6f8d4;
+}
+@media (max-width: 500px) {
+  .home .intro .intro-text .btn {
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 0.6rem;
+  }
+}
+.home .intro .intro-img {
+  width: 46%;
+  margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .intro .intro-img {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+}
+.home .intro .intro-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.cards {
+  padding: 0 20px;
+}
+.card {
+  margin: 20px 0;
+  padding: 0 20px 25px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+.card h2 {
+  font-size: 28px;
+  padding: 0;
+  margin: 15px 0 0;
+}
+.card .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card .expandButton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
+.card-open {
+  height: 400px;
+}
