@@ -201,9 +201,17 @@ footer {
   background: #0c3d46;
   padding: 20px 0;
   width: 100%;
+}
+footer .container {
+  padding: 0 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+footer .container div {
+  font-size: 20px;
+}
+footer .container div a {
+  color: #e6f8d4;
 }
 .home {
   margin-top: 150px;
@@ -237,7 +245,6 @@ footer {
   margin-bottom: 26px;
 }
 .home .intro .intro-text .btn {
-  text-decoration: none;
   width: 35%;
   border-radius: 0.4rem;
   color: #e6f8d4;
