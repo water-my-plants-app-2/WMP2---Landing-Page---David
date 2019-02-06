@@ -68,3 +68,33 @@
     }
   }
 }// home
+
+// About page
+
+.about {
+  width: 100%;
+  display: flex;
+  @media @phone {
+    flex-direction: column;
+  }
+  div {
+    .member {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      img{
+        width: 100px;
+        height: 100px;
+      }
+      .tab {
+        padding-left: 10px;
+        h3 {
+          a {
+          color: @header-font-color;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -283,29 +283,8 @@ footer .container div a {
   height: auto;
   border-radius: 10px;
 }
-.about {
-  width: 100%;
-  display: flex;
-}
-@media (max-width: 500px) {
-  .about {
-    flex-direction: column;
-  }
-}
-.about div .member {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-}
-.about div .member img {
-  width: 100px;
-  height: 100px;
-}
-.about div .member .tab {
-  padding-left: 10px;
-}
-.about div .member .tab h3 a {
-  color: #448e88;
+.tab {
+  color: #e6f8d4;
 }
 .cards {
   padding: 0 20px;
