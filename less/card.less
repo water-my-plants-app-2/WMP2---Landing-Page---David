@@ -8,14 +8,14 @@
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 50px;
+  height: 70px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
 
   h2 {
     font-size: 28px;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 20px 0;
   }
 
   .close {
@@ -28,7 +28,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    font-size: 12px;
+    font-size: 16px;
     color: grey;
     cursor: pointer;
     transform: translate(-50%);
@@ -37,7 +37,10 @@
 }
 
 .card-open {
-  height: 400px;
+  height: 200px;
+  @media @phone {
+    height: 400px;
+  }
 }
 
 
