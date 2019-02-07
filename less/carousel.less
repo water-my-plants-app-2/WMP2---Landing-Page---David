@@ -1,0 +1,44 @@
+.carousel {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .left-button, .right-button {
+      opacity: 0;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: @header-font-color;
+      background-color: @footer-background;
+      font-size: 40px;
+      position: absolute;
+      width: 30px;
+      height: 150px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.3;
+        color: @footer-background;
+        background-color: @header-font-color;
+        border: 3px solid @footer-background;
+      }
+    }
+    .left-button {
+      top: 50%; 
+      left: 25px;
+      transform: translate(0, -50%);
+    }
+    .right-button {
+      top: 50%; 
+      right: 25px;
+      transform: translate(0, -50%);
+    }
+    img {
+      width: 100%;
+      display: none;
+    }
+  }
