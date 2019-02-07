@@ -2,9 +2,10 @@
 
 .home {
 
-  margin-top: 150px;
+  margin-top: 74px;
 
   .intro {
+    background-color: @app-background;
     margin-top: 0px;
     padding: 20px 50px;
     display: flex;
@@ -33,7 +34,6 @@
       }
 
       .btn {
-        text-decoration: none;
         width:35%;
         .my-btn(@btn-text-color,@btn-bg-color);
         &:hover {
@@ -56,16 +56,72 @@
       margin-left: 4%;
 
       @media @phone {
+        height: 400px;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        text-align: center;
         margin: 0 0 20px 0;
       }
       
       img {
         width: 100%;
-        height: auto;
         border-radius: 10px;
       }
     }
   }
 }// home
+
+// About page
+
+.about {
+  background-color: @app-background;
+  width: 100%;
+  display: flex;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  div {
+    .member {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      img{
+        width: 100px;
+        height: 100px;
+      }
+      .tab {
+        padding-left: 10px;
+        h3 {
+          a {
+          color: @header-font-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Rating section
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 700px){
+    flex-direction: column;
+  }
+  .rating {
+    text-align: center;
+    width: 30%;
+    padding: 20px 10px;
+    @media (max-width: 700px){
+      width: 100%;
+    }
+    .star {
+      color: rgb(227, 178, 74);
+      padding: 10px;
+    }
+  }
+}
+

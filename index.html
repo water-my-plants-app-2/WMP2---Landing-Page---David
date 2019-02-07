@@ -11,6 +11,12 @@
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
   <script src="./card/card.js" async></script>
+  <script src="./Menu/Menu.js" async></script>
+  <script src="./carousel/carousel.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,32 +24,35 @@
   <header class="main-navigation">
     <div class="container nav-container">
       <h1 class="logo-heading">Water My Plant</h1>
+      <h1 class="menu-button"><i class="fas fa-bars"></i></h1>
+    </div>
+
+    <div class="menu container">
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="#">Contact</a>
-        <a class="nav-link" href="#">Sign In</a>
+        <a class="nav-link" href="https://kind-banach-2deafc.netlify.com/">Sign In</a>
       </nav>
     </div>
+
   </header>
 
   <div class="container home">
 
     <section class="intro">
       <div class="intro-text">
-        <h3>Let's water all the trees</h3>
 
-        <p>Magna eiusmod dolore cillum deserunt pariatur duis velit ut veniam cillum commodo adipisicing velit. Commodo
-          ea duis ex Lorem voluptate cupidatat minim non magna. Incididunt culpa laborum ipsum fugiat esse sunt aliquip
-          cillum sit.</p>
+        <h3><i class="fab fa-pagelines"></i> Do you forget to water your plants?</h3>
 
-        <p>Ad aliquip cillum esse occaecat magna incididunt nulla laborum culpa. Aliquip qui ad duis voluptate
-          reprehenderit occaecat. Non veniam consectetur ullamco dolor id adipisicing duis exercitation velit excepteur
-          sunt esse. Do minim ut aliquip do voluptate esse magna aliquip ullamco ad deserunt exercitation tempor.</p>
+        <p>It’s easy to forget to water your plants, but it doesn’t have to be. Water My Plant reminds you to water
+          plants through game-like notifications, plant-selfies, and time-lapse videos so you can watch your plants grow
+          baby grow.</p>
 
-        <a class="btn" href="https://kind-banach-2deafc.netlify.com/">
+
+        <div class="btn" onclick="window.location='https://kind-banach-2deafc.netlify.com/';">
           Sign In
-        </a>
+        </div>
       </div>
 
       <div class="intro-img">
@@ -54,34 +63,87 @@
 
     <div class="cointainer cards">
       <div class="card">
-        <h2>Why do plants need water?</h2>
+        <h2><i class="fas fa-leaf"></i> Why do plants need water?</h2>
 
-        <p>Est ullamco deserunt culpa laborum est nisi pariatur in adipisicing. Irure laboris excepteur excepteur eu minim aliquip occaecat sit in. Commodo quis nostrud Lorem ipsum nulla nostrud consequat elit velit anim magna. Mollit deserunt mollit labore ea ullamco commodo in in eiusmod qui velit. Duis occaecat voluptate dolore sint excepteur nulla. Ut proident elit nulla tempor minim.</p>
+        <p>Photosynthesis is what plants do to create their food, and water is critical to this process. Water enters a
+          plant's stem and travels up to its leaves, which is where photosynthesis actually takes place. Once in the
+          leaves water evaporates, as the plant exchanges water for carbon dioxide.</p>
 
         <span class='expandButton'></span>
       </div>
       <div class="card">
-        <h2>How to water your plants?</h2>
+        <h2><i class="fas fa-leaf"></i> How to water your plants?</h2>
 
-        <p>Voluptate ullamco reprehenderit occaecat consectetur elit eu esse anim proident. Commodo ad eiusmod Lorem aliquip laboris incididunt minim irure cupidatat sint. Fugiat dolore fugiat elit labore nulla nisi aute ut sint duis. Nisi consequat commodo duis irure elit ea aliqua mollit incididunt enim do.</p>
-      
+        <p>If it's not heavy enough, you water slowly until all the soil in the pot is moist and water runs out the
+          bottom. Then you lift the pot again to check that it feels right. Watering is of no value if the water runs
+          down the outside of the root ball, leaving the roots at the core of the plant dry.</p>
+
         <span class='expandButton'></span>
       </div>
       <div class="card">
-        <h2>Why does over-watering kill plants?</h2>
+        <h2><i class="fas fa-leaf"></i> Why does over-watering kill plants?</h2>
 
-        <p>Voluptate ullamco reprehenderit occaecat consectetur elit eu esse anim proident. Commodo ad eiusmod Lorem aliquip laboris incididunt minim irure cupidatat sint. Fugiat dolore fugiat elit labore nulla nisi aute ut sint duis. Nisi consequat commodo duis irure elit ea aliqua mollit incididunt enim do.</p>
-    
+        <p>Roots growing in waterlogged soil may die because they cannot absorb the oxygen needed to function normally.
+          The longer the air is cut off, the greater the root damage. The dying roots decay and cannot supply the plants
+          with nutrients and water. Damage caused by over watering is frequently misdiagnosed as pest damage.</p>
+
         <span class='expandButton'></span>
       </div>
     </div>
 
   </div>
 
-  <footer>
-    <p>Water My Plants 2019</p>
-  </footer>
-  
+  <div class="carousel container">
+    <div class="left-button"><</div> 
+    <img class="carImg" data-num="1" src="img/1.jpg" />
+    <img class="carImg" data-num="2" src="img/2.jpg" />
+    <img class="carImg" data-num="3" src="img/3.jpg" />
+    <div class="right-button">></div>
+  </div>
+
+  <div class="ratings container">
+
+    <div class="rating">
+      <h3 class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+          class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+      <h3>Awesome app</h3>
+      <p>I have a lot of plants and two housemates. We’re not always at home, but this app makes sure we water the
+        plants
+        at the right time. Thanks!</p>
+    </div>
+
+    <div class="rating">
+      <h3 class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+          class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+      <h3>LOVE this app!! ??</h3>
+      <p>I just recently started growing a little plant of my own and this app has just been a life saver! Firstly, I
+        love how I can take a picture of my plant and give it a name. Secondly, it does what it says it does and reminds
+        me when to water my plants. From all
+        the watering-plant-reminder apps I’ve seen and used, this by far has been my favorite one!!</p>
+    </div>
+
+    <div class="rating">
+      <h3 class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+          class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+      <h3>high hopes for this !!!</h3>
+      <p>Just signed up for the app and it doesn’t seem buggy like the other apps. The design is nice and sleek but now
+        let’s see if it’s efficient !!</p>
+    </div>
+  </div>
+
+    <footer>
+      <div class="container">
+        <p>© Water My Plants 2019</p>
+        <div>
+          <a href="https://www.youtube.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.youtube.com"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
 </body>
 
 </html>

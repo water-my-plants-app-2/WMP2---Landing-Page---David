@@ -1,0 +1,21 @@
+
+.menu {
+  opacity: 0.9;
+  display: none;
+  position: fixed;
+  left:60%;
+  top: 80px;
+  width: 300px;
+  height: 200px;
+  background-color: @header-font-color;
+  border-radius: 10px;
+  z-index: 2;
+
+  @media (max-width: 700px) {
+    width: 200px;
+  }
+}
+
+.menu--open {
+  display: block;
+}

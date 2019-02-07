@@ -1,22 +1,32 @@
 // Navigation code here
 .main-navigation {
 
+    z-index: 9000;
     background-color: @nav-bg;
     position: fixed;
     top: 0;
     width: 100%;
 
     .nav-container {
-
-        .centered-column;
-
-        .logo-heading {
-            margin: 1rem;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        
+        .menu-button {
+            cursor: pointer;
         }
+    }
+
+    .menu {
 
         .nav {
+            height: 100%;
             display: flex;
-        
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
             a {
                 text-decoration: none;
                 color: @nav-font;

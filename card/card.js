@@ -9,6 +9,7 @@ class Card {
 
   expandCard() {
     this.domElement.classList.toggle('card-open');
+    this.expandButton.textContent === 'expand' ? this.expandButton.textContent = 'close' : this.expandButton.textContent = 'expand';
   }
 }
 
